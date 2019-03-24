@@ -2,11 +2,13 @@ import * as React      from 'react';
 import * as ReactDOM   from 'react-dom';
 import * as QRCode     from 'qrcode.react';
 
-import Grid                  from 'material-ui/Grid';
-import Radio, { RadioGroup } from 'material-ui/Radio';
-import Paper                 from 'material-ui/Paper';
-import TextField             from 'material-ui/TextField';
-import { FormLabel, FormControlLabel } from 'material-ui/Form';
+import Grid             from '@material-ui/core/Grid';
+import Radio            from '@material-ui/core/Radio';
+import RadioGroup       from '@material-ui/core/RadioGroup';
+import Paper            from '@material-ui/core/Paper';
+import TextField        from '@material-ui/core/TextField';
+import FormLabel        from '@material-ui/core/FormLabel';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 type Level = 'L' | 'M' | 'Q' | 'H'
 
@@ -38,17 +40,17 @@ class App extends React.Component<Props, State> {
       <div>
           <Grid container direction={'row'}>
               <Grid item md={2}>
-                  <FormLabel component="legend">Level</FormLabel>
+                  <FormLabel>Level</FormLabel>
                   <RadioGroup
                       aria-label="level"
                       name="level"
                       value={this.state.level}
                       onChange={this.handleChange.bind(this)}
                   >
-                      <FormControlLabel value="L" control={<Radio />} label="L" />
-                      <FormControlLabel value="M" control={<Radio />} label="M" />
-                      <FormControlLabel value="Q" control={<Radio />} label="Q" />
-                      <FormControlLabel value="H" control={<Radio />} label="H" />
+                      <FormControlLabel value="L" control={<Radio color="primary" />} label="L" />
+                      <FormControlLabel value="M" control={<Radio color="primary" />} label="M" />
+                      <FormControlLabel value="Q" control={<Radio color="primary" />} label="Q" />
+                      <FormControlLabel value="H" control={<Radio color="primary" />} label="H" />
                   </RadioGroup>
               </Grid>
               <Grid item md={3}>
