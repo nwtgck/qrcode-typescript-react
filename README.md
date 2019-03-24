@@ -4,7 +4,7 @@
 
 ## Demo page
 
-https://nwtgck.github.io/qrcode-typescript-react/build/
+https://nwtgck.github.io/qrcode-typescript-react
 
 ## How to run
 
