@@ -2,7 +2,7 @@ const path              = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const srcPath   = path.resolve(__dirname, 'src');
-const buildPath = path.resolve(__dirname, 'build');
+const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
   entry: path.join(srcPath, 'index.tsx'),
